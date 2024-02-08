@@ -1,97 +1,126 @@
-import React from "react";
+import { Row, Col } from "react-bootstrap";
 
-const Footer = () => {
-  return (
-    <footer className="bg-dark text-light mt-5">
-      <div className="row justify-content-center">
-        <div className="col col-6">
-          <div className="row">
-            <div className="col mb-2"></div>
-          </div>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
-                  <p>
-                    <span>Audio and Subtitles</span>
-                  </p>
-                  <p>
-                    <span>Media Center</span>
-                  </p>
-                  <p>
-                    <span>Privacy</span>
-                  </p>
-                  <p>
-                    <span>Contact us</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
-                  <p>
-                    <span>Audio Description</span>
-                  </p>
-                  <p>
-                    <span>Investor Relations</span>
-                  </p>
-                  <p>
-                    <span>Legal Notices</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
-                  <p>
-                    <span>Help Center</span>
-                  </p>
-                  <p>
-                    <span>Jobs</span>
-                  </p>
-                  <p>
-                    <span>Cookie Preferences</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col">
-              <div className="row">
-                <div className="col footer-links">
-                  <p>
-                    <span>Gift Cards</span>
-                  </p>
-                  <p>
-                    <span>Terms of Use</span>
-                  </p>
-                  <p>
-                    <span>Corporate Information</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col mb-2">
-              <button
-                type="button"
-                className="btn btn-sm footer-button rounded-0 mt-3"
-              >
-                Service Code
-              </button>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col mb-2 mt-2 copyright">
-              © 1997-2023 Netflix, Inc.
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
-  );
-};
+const MyFooter = () => (
+  <footer>
+    <Row className="text-center mt-5">
+      <Col xs={{ span: 6, offset: 3 }}>
+        <Row>
+          <Col xs={12} className="text-left mb-2">
+            <i className="fa fa-facebook footer-icon"></i>
+            <i className="fa fa-instagram footer-icon"></i>
+            <i className="fa fa-twitter footer-icon"></i>
+            <i className="fa fa-youtube footer-icon"></i>
+          </Col>
+        </Row>
+        <Row className="row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-4">
+          <Col>
+            <Row>
+              <Col xs={12} className="footer-links">
+                <p>
+                  <a href="/" alt="footer link">
+                    Audio and Subtitles
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Media Center
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Privacy
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Contact us
+                  </a>
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col>
+            <Row>
+              <Col xs={12} className="footer-links">
+                <p>
+                  <a href="/" alt="footer link">
+                    Audio Description
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Investor Relations
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Legal Notices
+                  </a>
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col>
+            <Row>
+              <Col xs={12} className="footer-links">
+                <p>
+                  <a href="/" alt="footer link">
+                    Help Center
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Jobs
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Cookie Preferences
+                  </a>
+                </p>
+              </Col>
+            </Row>
+          </Col>
+          <Col>
+            <Row>
+              <Col xs={12} className="footer-links">
+                <p>
+                  <a href="/" alt="footer link">
+                    Gift Cards
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Terms of Use
+                  </a>
+                </p>
+                <p>
+                  <a href="/" alt="footer link">
+                    Corporate Information
+                  </a>
+                </p>
+              </Col>
+            </Row>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="text-left mb-2">
+            <button
+              type="button"
+              className="btn btn-sm footer-button rounded-0 mt-3"
+            >
+              Service Code
+            </button>
+          </Col>
+        </Row>
+        <Row>
+          <Col xs={12} className="text-left mb-2 mt-2 copyright">
+            © 1997-{new Date().getFullYear()} Netflix, Inc.
+          </Col>
+        </Row>
+      </Col>
+    </Row>
+  </footer>
+);
 
-export default Footer;
+export default MyFooter;

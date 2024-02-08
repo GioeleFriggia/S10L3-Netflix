@@ -1,23 +1,19 @@
-import React from "react";
-import MyNav from "./components/MyNav";
-import MyFooter from "./components/MyFooter";
-import MovieGallery from "./components/MovieGallery";
-import TvShows from "..//src/components/TvShows";
-import { Container } from "react-bootstrap";
-import "./assets/NetflixLogo.png";
+import "./App.css";
+import "./styles/styles.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./components/HomePage";
+import MovieDetails from "./components/MovieDetails";
+import TVShows from "./components/TVShows";
 
-function App() {
-  return (
-    <>
-      <MyNav />
-
-      <Container>
-        <TvShows />
-        <MovieGallery />
-      </Container>
-      <MyFooter />
-    </>
-  );
-}
+const App = () => (
+  <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/tv-shows" element={<TVShows />} />
+      <Route path="/details/:movieID" element={<MovieDetails />} />
+    </Routes>
+  </BrowserRouter>
+);
 
 export default App;
